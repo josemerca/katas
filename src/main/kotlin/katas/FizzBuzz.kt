@@ -1,3 +1,5 @@
+package katas
+
 fun main(args: Array<String>) {
     println("FizzBuzz Kata!")
     for (i in 1..100) {
