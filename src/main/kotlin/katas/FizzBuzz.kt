@@ -2,23 +2,15 @@ package katas
 
 fun main(args: Array<String>) {
     println("FizzBuzz Kata!")
-    for (i in 1..100) {
-        if ((i.mod(5) == 0) && (i.mod(3) == 0)) {
-            println("FizzBuzz")
-        }
-        else if (i.mod(3) == 0) {
-            println("Fizz")
-        }
-        else if (i.mod(5) == 0) {
-            println("Buzz")
-        }
-        else {
-            println(i)
-        }
+    val range = 1..100
+    range.map { FizzBuzz(it) }
+}
+
+fun FizzBuzz(item : Int) {
+    when (true) {
+        (item.mod(15) == 0) -> println("FizzBuzz")
+        (item.mod(3) == 0) -> println("Fizz")
+        (item.mod(5) == 0) -> println("Buzz")
+        else -> println(item)
     }
-
-
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
 }
